@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的博客</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#directory">目录</a></li>
+                <li><a href="#categories">分类</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="头像.jpg" alt="头像" class="avatar">
+                <div class="profile-info">
+                    <p front-style="">yycc</p>
+                    <p>简介: 热爱分享生活与知识的创作者。</p>
+                    <button class="toggle-info">更多信息</button>
+                    <div class="detailed-info" style="display: none;">
+                        <p>居住城市: 美丽都市</p>
+                        <p>邮箱: yourmail@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <section class="content">
+            <article>
+                <h2>精彩旅行分享</h2>
+                <p>上次去了一趟神秘的山间小镇，那里的风景宛如仙境，青山绿水环绕，古旧的石板路承载着岁月的痕迹......
+                </p>
+            </article>
+            <article>
+                <h2>技术学习心得</h2>
+                <p>最近钻研前端新技术，发现框架的更新迭代越来越快，不过只要掌握核心原理，就能轻松跟上节奏......
+                </p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+<style>
+  /* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('980.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+header:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.sidebar {
+    width: 25%;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.toggle-info {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-info:hover {
+    background-color: #eee;
+}
+
+.content {
+    width: 75%;
+}
+
+article {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.detailed-info {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+</style>
+<script>
+   // script.js
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButtons = document.querySelectorAll('.toggle-info');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const detailedInfo = this.nextElementSibling;
+            if (detailedInfo.style.display === 'none' || detailedInfo.style.display === '') {
+                detailedInfo.style.display = 'block';
+            } else {
+                detailedInfo.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
+</html>
