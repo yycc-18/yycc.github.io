@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的博客</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">关于</a></li>
+                <li><a href="#">博客</a></li>
+                <li><a href="#">联系</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>欢迎来到我的博客</h1>
+        <div class="post-list">
+            <article class="post">
+                <h2>博客文章标题 1</h2>
+                <p>这是一篇关于什么的博客文章摘要。点击阅读更多...</p>
+                <a href="#" class="read-more">阅读更多</a>
+            </article>
+            <article class="post">
+                <h2>博客文章标题 2</h2>
+                <p>这是另一篇博客文章的摘要。点击阅读更多...</p>
+                <a href="#" class="read-more">阅读更多</a>
+            </article>
+            <article class="post">
+                <h2>博客文章标题 3</h2>
+                <p>这是第三篇博客文章的摘要。点击阅读更多...</p>
+                <a href="#" class="read-more">阅读更多</a>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 我的博客. 保留所有权利.</p>
+    </footer>
+    <style>
+    body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* 布局样式 */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 1rem;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.post {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+    margin-bottom: 0.5rem;
+}
+
+.post p {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.read-more {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}</style>
+</body>
+</html>
